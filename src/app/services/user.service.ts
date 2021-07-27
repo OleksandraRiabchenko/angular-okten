@@ -10,6 +10,7 @@ export class UserService {
   private url = 'https://jsonplaceholder.typicode.com/users'
 
   constructor(private httpClient: HttpClient) {
+    console.log('user service instance created')
   }
 
   getAllUsers(): Observable<IUser[]> {
