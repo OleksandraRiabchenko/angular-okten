@@ -2,13 +2,26 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import {RouterModule} from "@angular/router";
+import { PostsComponent } from './components/posts/posts.component';
+import {routes} from "./routes/basic.routes";
+import { CommentsComponent } from './components/comments/comments.component';
+import {HttpClientModule} from "@angular/common/http";
+import { PostComponent } from './components/post/post.component';
+import { PostDetailsComponent } from './components/post-details/post-details.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PostsComponent,
+    CommentsComponent,
+    PostComponent,
+    PostDetailsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
