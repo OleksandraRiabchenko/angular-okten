@@ -7,7 +7,7 @@ import {IPost} from "../models/IPost";
   providedIn: 'root'
 })
 export class PostService {
-  url = 'https://jsonplaceholder.typicode.com/users';
+  private url = 'https://jsonplaceholder.typicode.com/users';
 
   constructor(private httpClient:HttpClient) {
   }
