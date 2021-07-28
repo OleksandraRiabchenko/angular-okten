@@ -5,9 +5,6 @@ import {UserWithPostsComponent} from "../components/user-with-posts/user-with-po
 
 export const routes: Routes = [
   {path: 'users', component: UsersComponent, children: [
-      // {path: ':id/user-with-posts', component: UserWithPostsComponent}
       {path: ':id/user-with-posts', component: UserWithPostsComponent}
     ]},
-  // {path: 'user-with-posts', component: PostComponent}
-//todo не забути
 ]
