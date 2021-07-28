@@ -7,7 +7,6 @@ import {IPost} from "../../models/IPost";
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-
   @Input()
   post:IPost
 

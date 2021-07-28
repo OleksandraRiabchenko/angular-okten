@@ -9,6 +9,8 @@ import { CommentsComponent } from './components/comments/comments.component';
 import {HttpClientModule} from "@angular/common/http";
 import { PostComponent } from './components/post/post.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
+import { CommentDetailsComponent } from './components/comment-details/comment-details.component';
+import { CommentComponent } from './components/comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { PostDetailsComponent } from './components/post-details/post-details.com
     PostsComponent,
     CommentsComponent,
     PostComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    CommentDetailsComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
