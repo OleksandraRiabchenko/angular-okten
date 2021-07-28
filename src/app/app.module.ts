@@ -8,7 +8,6 @@ import { UsersComponent } from './components/users/users.component';
 import { UserComponent } from './components/user/user.component';
 import { UserWithPostsComponent } from './components/user-with-posts/user-with-posts.component';
 import {HttpClientModule} from "@angular/common/http";
-import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/post/post.component';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { PostComponent } from './components/post/post.component';
     UsersComponent,
     UserComponent,
     UserWithPostsComponent,
-    PostsComponent,
     PostComponent
   ],
   imports: [
