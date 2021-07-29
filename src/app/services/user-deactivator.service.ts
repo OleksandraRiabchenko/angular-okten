@@ -12,6 +12,6 @@ export class UserDeactivatorService implements CanDeactivate<boolean> {
 
   // не дозволяти перехід з урли / на урлу /users/1
   canDeactivate(component: boolean, currentRoute: ActivatedRouteSnapshot, currentState: RouterStateSnapshot, nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return false;
+    return confirm('are you want to leave from curent page to /user/:id?');
   }
 }
