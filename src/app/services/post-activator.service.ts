@@ -1,9 +1,17 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
+import {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree} from "@angular/router";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
-export class PostActivatorService {
+export class PostActivatorService implements CanActivate {
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
+    Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-  constructor() { }
+    return +route.params.id > 0 && +route.params.id < 101;
+  }
+
+  constructor() {
+  }
 }
