@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {IPost} from "../../models/IPost";
 
 @Component({
@@ -11,8 +11,11 @@ export class PostDetailsComponent implements OnInit {
 
   post: IPost;
 
-  constructor(private router: Router) {
-    this.post = this.router.getCurrentNavigation()?.extras.state as IPost;
+  constructor(private router: Router,
+              private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.params.subscribe(() => {
+      this.post = this.router.getCurrentNavigation()?.extras.state as IPost;
+    })
   }
 
   ngOnInit(): void {

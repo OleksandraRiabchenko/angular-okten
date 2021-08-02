@@ -8,6 +8,7 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./user-details.component.scss']
 })
 export class UserDetailsComponent implements OnInit {
+
   user: IUser;
 
   constructor(private router: Router, private activatedRouter: ActivatedRoute) {

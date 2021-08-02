@@ -8,6 +8,7 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
+
   @Input()
   user: IUser
 
