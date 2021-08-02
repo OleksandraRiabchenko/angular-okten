@@ -11,13 +11,6 @@ export class PostDetailsComponent implements OnInit {
 
   post: IPost;
 
-  // constructor(private postService: PostService,
-  //             private activatedRoute: ActivatedRoute) {
-  //   this.activatedRoute.params.subscribe(({id}) => {
-  //     this.postService.getPostById(id).subscribe(value => this.post = value)
-  //   })
-  // }
-
   constructor(private router: Router) {
     this.post = this.router.getCurrentNavigation()?.extras.state as IPost;
   }

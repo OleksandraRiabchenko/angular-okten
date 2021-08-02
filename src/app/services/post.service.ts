@@ -16,7 +16,7 @@ export class PostService {
     return this.httpClient.get<IPost[]>(this._url)
   }
 
-  getPostById(id:number):Observable<IPost> {
-    return this.httpClient.get<IPost>(this._url + '/' + id)
-  }
+  // getPostById(id:number):Observable<IPost> {
+  //   return this.httpClient.get<IPost>(this._url + '/' + id)
+  // }
 }
