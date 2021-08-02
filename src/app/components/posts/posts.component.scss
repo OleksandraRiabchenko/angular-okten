@@ -1,0 +1,15 @@
+.wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.full-info {
+  width: 100%;
+}
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 20px;
+}
