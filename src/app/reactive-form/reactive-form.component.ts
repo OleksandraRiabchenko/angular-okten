@@ -9,17 +9,8 @@ import {AbstractControl, FormControl, FormGroup, Validators} from "@angular/form
 })
 export class ReactiveFormComponent implements OnInit {
 
-  customValidator(inputValue:AbstractControl) {
-    console.log(inputValue)
-    if(inputValue.value.includes('duck')) {
-      return {achtung: 'duck word is present'}
-    }
-
-    return null; // -> errors (для того щоб валідатор хоть щось повертав і не видавав помилку)
-  }
   username = new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(10), this.customValidator]);
   password = new FormControl('');
-
 
   myForm: FormGroup = new FormGroup(
     {
@@ -35,5 +26,12 @@ export class ReactiveFormComponent implements OnInit {
 
   save() {
     console.log(this.myForm)
+  }
+
+  customValidator(inputValue: AbstractControl) {
+    if (inputValue.value.includes('duck')) {
+      return {achtung: 'duck word is present'}
+    }
+    return null; // -> errors
   }
 }
