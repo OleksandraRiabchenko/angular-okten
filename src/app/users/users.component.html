@@ -1,0 +1,9 @@
+<form #tref (ngSubmit)="showInfo(tref)">
+  <select name="user" [(ngModel)]="user">
+    <option *ngFor="let user of users" [value] = user.name>{{user.name}}</option>
+  </select >
+  <button>show info</button>
+</form>
+<p>{{user | json}}</p>
+
+
