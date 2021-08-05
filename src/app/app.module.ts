@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {RouterModule} from "@angular/router";
 import { UsersComponent } from './users/users.component';
 import {HttpClientModule} from "@angular/common/http";
+import {UserResolveService} from "./services/user-resolve.service";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path:'users', component: UsersComponent}
+      {path:'users', component: UsersComponent, resolve: {xxx: UserResolveService}}
     ]),
     HttpClientModule
   ],
