@@ -22,5 +22,4 @@ export class UserResolveService implements Resolve<any> {
   //     }, 3000)
   //   })
   // }
-
 }
