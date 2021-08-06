@@ -3,21 +3,18 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import {RouterModule} from "@angular/router";
-import {UsersComponent} from './users/users.component';
+import { TDFormComponent } from './td-form/td-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    TDFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([{path: '', component: UsersComponent}]),
-    HttpClientModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

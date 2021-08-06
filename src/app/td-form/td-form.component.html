@@ -1,0 +1,13 @@
+<form #tref (ngSubmit)="showInfo()">
+  <select name="user" [(ngModel)]="userId">
+    <option *ngFor="let user of users" [value] = user.id>{{user.name}}</option>
+  </select >
+  <button>show info</button>
+</form>
+
+
+<p>{{userInfo | json}}</p>
+
+<!--todo код знизу не працює, чому так?-->
+<!--<p>{{userInfo.id}} - {{userInfo.name}}</p>-->
+
