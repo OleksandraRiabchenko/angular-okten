@@ -9,12 +9,5 @@ import {DataService} from "./services/data.service";
 export class AppComponent {
   title = 'angular-okten Lesson 6 lazy';
 
-  constructor(private dataService: DataService) {
-    this.dataService.getCurrentValue().subscribe(value => this.title = value)
-  }
 
-  incrementDataCell() {
-    let value = this.dataService.getSnapshotValue();
-    this.dataService.setNewValue(++value);
-  }
 }
