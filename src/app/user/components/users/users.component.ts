@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {UserService} from "../../services/user.service";
+import {IUser} from "../../../models/IUser";
 
 
 @Component({
@@ -7,13 +9,18 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
-  currentDataCellValue: any;
+  selectedUser: IUser
+  users: IUser[]
 
-  constructor() {
+  constructor(private userService: UserService) {
   }
 
   ngOnInit(): void {
+    this.userService.getUsers().subscribe(value => this.users = value)
   }
 
 
+  catchEE(obj: IUser) {
+    this.selectedUser = obj;
+  }
 }

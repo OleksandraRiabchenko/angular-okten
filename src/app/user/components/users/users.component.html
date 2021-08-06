@@ -1,3 +1,7 @@
-<p>users works!</p>
+<div *ngIf="selectedUser">
+  {{selectedUser | json}}
+</div>
+
+<app-user *ngFor="let user of users" [user]="user" (xxx)="catchEE($event)"></app-user>
 
 

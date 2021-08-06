@@ -5,11 +5,13 @@ import { UserRoutingModule } from './user-routing.module';
 import { UsersComponent } from './components/users/users.component';
 import {UserService} from "./services/user.service";
 import {HttpClientModule} from "@angular/common/http";
+import { UserComponent } from './components/user/user.component';
 
 
 @NgModule({
   declarations: [
-    UsersComponent
+    UsersComponent,
+    UserComponent
   ],
   imports: [
     CommonModule,
