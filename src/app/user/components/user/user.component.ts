@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {IUser} from "../../../models/IUser";
 
 @Component({
@@ -6,7 +6,7 @@ import {IUser} from "../../../models/IUser";
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
-export class UserComponent implements OnInit {
+export class UserComponent implements OnInit, OnChanges {
   @Input()
   user: IUser;
 
@@ -22,4 +22,10 @@ export class UserComponent implements OnInit {
   selectUser() {
     this.xxx.emit(this.user)
   }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes)
+  }
+
+
 }

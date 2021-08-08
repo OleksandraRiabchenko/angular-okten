@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {UserService} from "../../services/user.service";
 import {IUser} from "../../../models/IUser";
 
@@ -8,7 +8,7 @@ import {IUser} from "../../../models/IUser";
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
-export class UsersComponent implements OnInit {
+export class UsersComponent implements OnInit, OnDestroy {
   selectedUser: IUser
   users: IUser[]
 
@@ -22,4 +22,10 @@ export class UsersComponent implements OnInit {
   catchEE(obj: IUser) {
     this.selectedUser = obj;
   }
+
+  ngOnDestroy(): void {
+    console.log('destroy UsersComponent')
+  }
+
+  
 }
