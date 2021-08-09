@@ -13,10 +13,16 @@ post:IPost;
   constructor(private postService: PostService,
               private activatedRoute: ActivatedRoute) { }
 
+  //todo підкажи будь ласка що я роблю не так з resolve
+  // ngOnInit(): void {
+  //   this.activatedRoute.data.subscribe(value => this.post = value.postInfo)
+  // }
+
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(({id}) => {
       this.postService.getPostById(id).subscribe(value => this.post=value)
     })
   }
+
 
 }
