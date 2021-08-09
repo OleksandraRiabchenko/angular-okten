@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {IUser} from "../models/IUser";
-import {UserService} from "../services/user.service";
+import {UserService} from "../../services";
+import {IUser} from "../../models";
+
 
 @Component({
   selector: 'app-user-details',
@@ -19,16 +20,9 @@ export class UserDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(({id}) => {
-      this.userService.getUserById(id).subscribe(value => this.user = value)
+      this.router.getCurrentNavigation()?.extras.state
+        ? this.user = this.router.getCurrentNavigation()?.extras.state as IUser
+        : this.userService.getUserById(id).subscribe(value => this.user = value);
     })
   }
-
-  //todo не спрацьовує при першому натисканні на кнопку, Що роблю не так? можливо потрібна якась умова?
-  // ngOnInit(): void {
-  //   this.activatedRoute.params.subscribe(() => {
-  //     this.user = this.router.getCurrentNavigation()?.extras.state as IUser
-  //   })
-  // }
-
-
 }

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {IUser} from "../models/IUser";
+import {IUser} from "../../models";
+
 
 @Component({
   selector: 'app-users',
@@ -9,7 +10,6 @@ import {IUser} from "../models/IUser";
 })
 export class UsersComponent implements OnInit {
   users: IUser[];
-  user: IUser;
 
   constructor(private activatedRoute: ActivatedRoute) {
   }

@@ -1,14 +1,13 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { PostRoutingModule } from './post-routing.module';
-import { PostsComponent } from './posts/posts.component';
-import {PostService} from "./services/post.service";
-import {PostsResolveService} from "./services/posts-resolve.service";
+import {PostRoutingModule} from './post-routing.module';
+import {PostsComponent} from './components/posts/posts.component';
 import {HttpClientModule} from "@angular/common/http";
-import { PostComponent } from './post/post.component';
-import { PostDetailsComponent } from './post-details/post-details.component';
-import {PostInfoResolveService} from "./services/post-info-resolve.service";
+import {PostComponent} from './components/post/post.component';
+import {PostDetailsComponent} from './components/post-details/post-details.component';
+import {PostInfoResolveService, PostService, PostsResolveService} from "./services";
+
 
 
 @NgModule({
@@ -28,4 +27,5 @@ import {PostInfoResolveService} from "./services/post-info-resolve.service";
     PostInfoResolveService
   ]
 })
-export class PostModule { }
+export class PostModule {
+}
